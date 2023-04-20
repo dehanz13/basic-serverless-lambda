@@ -3,8 +3,12 @@ service: basic-serverless-lambda
 provider:
   name: aws
   runtime: nodejs12.x
+  # you can overwrite defaults here
+  stage: dev
+  profile: devProfile
+  iam:
+    deploymentRole: arn:aws:iam::842211618639:role/lambdaS3UploadServiceTaskRole
 
-# you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
 
