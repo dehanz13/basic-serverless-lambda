@@ -3,9 +3,7 @@ name: Deploy Lambda Action
 on:
   push:
     branches:
-      - master
       - main
-      - develop
 
 jobs:
   deploy:
