@@ -8,26 +8,30 @@ provider:
   region: us-east-1
   iam:
     deploymentRole: arn:aws:iam::842211618639:role/lambdaS3UploadServiceTaskRole
-  # iam:
-  #   role:
-  #     statements:
-  #       - Effect: "Allow"
-  #         Action:
-  #           - "s3:ListBucket"
-  #         Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
-  #       - Effect: "Allow"
-  #         Action:
-  #           - "s3:PutObject"
-  #         Resource:
-  #           Fn::Join:
-  #             - ""
-  #             - - "arn:aws:s3:::"
-  #               - "Ref" : "ServerlessDeploymentBucket"
-  #               - "/*"
+    # iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "s3:ListBucket"
+          Resource:
+            {
+              "Fn::Join":
+                ["", ["arn:aws:s3:::", { "Ref": "liveramp-integration-dev" }]],
+            }
+        - Effect: "Allow"
+          Action:
+            - "s3:PutObject"
+          Resource:
+            Fn::Join:
+              - ""
+              - - "arn:aws:s3:::"
+                - "Ref": "liveramp-integration-dev"
+                - "/*"
 
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
+  # you can define service wide environment variables here
+  environment:
+    AWS_ACCESS_KEY_ID: AKIA4IF5ZN5HWV5XFEI4
 
 # you can add packaging information here
 #package:
@@ -81,13 +85,13 @@ functions:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
-#resources:
-#  Resources:
-#    NewResource:
-#      Type: AWS::S3::Bucket
-#      Properties:
-#        BucketName: my-new-bucket
-#  Outputs:
-#     NewOutput:
-#       Description: "Description for the output"
-#       Value: "Some output value"
+resources:
+  Resources:
+    NewResource:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: liveramp-integration-dev
+  Outputs:
+    NewOutput:
+      Description: "Description for the output"
+      Value: "Some output value"
