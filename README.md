@@ -1,5 +1,7 @@
 # basic-serverless-lambda
 
+Quick setup on setting up a simple CI/CD workflow.
+
 ## Tech Stack:
 
 - AWS
