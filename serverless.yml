@@ -17,7 +17,7 @@ provider:
           Resource:
             {
               "Fn::Join":
-                ["", ["arn:aws:s3:::", { "Ref": "liveramp-integration-dev" }]],
+                ["", ["arn:aws:s3:::", { "Ref": "lambda-s3-upload-dev" }]],
             }
         - Effect: "Allow"
           Action:
@@ -26,7 +26,7 @@ provider:
             Fn::Join:
               - ""
               - - "arn:aws:s3:::"
-                - "Ref": "liveramp-integration-dev"
+                - "Ref": "lambda-s3-upload-dev"
                 - "/*"
 
   # you can define service wide environment variables here
@@ -90,7 +90,7 @@ resources:
     NewResource:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: liveramp-integration-dev
+        BucketName: lambda-s3-upload-dev
   Outputs:
     NewOutput:
       Description: "Description for the output"

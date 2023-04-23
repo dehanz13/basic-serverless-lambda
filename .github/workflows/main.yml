@@ -1,13 +1,12 @@
 name: Deploy Lambda Action
-
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
-    name: deploy
+  deploy-dev:
+    name: deploy-dev
     runs-on: ubuntu-latest
     strategy:
       matrix:
