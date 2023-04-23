@@ -28,11 +28,6 @@ provider:
               - - "arn:aws:s3:::"
                 - "Ref": "lambda-s3-upload-dev"
                 - "/*"
-
-  # you can define service wide environment variables here
-  environment:
-    AWS_ACCESS_KEY_ID: AKIA4IF5ZN5HWV5XFEI4
-
 # you can add packaging information here
 #package:
 #  patterns:

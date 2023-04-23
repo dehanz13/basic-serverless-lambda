@@ -1,4 +1,7 @@
-name: Deploy Lambda Action
+name: Lambda Action Deployment
+
+concurrency: development
+
 on:
   push:
     branches:
