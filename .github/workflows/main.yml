@@ -1,5 +1,4 @@
 name: Lambda Action Deployment
-env:
 
 concurrency: development
 
