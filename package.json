@@ -1,0 +1,19 @@
+{
+  "name": "basic-serverless-lambda",
+  "version": "1.0.0",
+  "description": "Deploy Lambda S3",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dehanz13/basic-serverless-lambda.git"
+  },
+  "author": "Danniel Hansel <hansel.danniel@gmail.com> (https://dannielhansel.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dehanz13/basic-serverless-lambda/issues"
+  },
+  "homepage": "https://github.com/dehanz13/basic-serverless-lambda#readme"
+}

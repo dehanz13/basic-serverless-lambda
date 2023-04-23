@@ -4,7 +4,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   # you can overwrite defaults here
-  stage: dev
+  stage: development
   region: us-east-1
   iam:
     deploymentRole: arn:aws:iam::842211618639:role/lambdaS3UploadServiceTaskRole
