@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dehanz13/basic-serverless-lambda/issues"
   },
-  "homepage": "https://github.com/dehanz13/basic-serverless-lambda#readme"
+  "homepage": "https://github.com/dehanz13/basic-serverless-lambda#readme",
+  "dependencies": {
+    "npm": "9.6.5"
+  }
 }
